@@ -1,0 +1,25 @@
+{
+    "name": "simpod/psalm-bugs",
+    "authors": [
+        {
+            "name": "Simon Podlipsky",
+            "email": "simon@podlipsky.net"
+        }
+    ],
+    "require": {
+        "php-64bit": "^8.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "SimPod\\PsalmBugs\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SimPod\\PsalmBugs\\Tests\\": "tests/"
+        }
+    }
+}
