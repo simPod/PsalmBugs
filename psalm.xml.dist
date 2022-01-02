@@ -3,6 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://getpsalm.org/schema/config"
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+    autoloader="src/bootstrap.php"
     errorLevel="1"
     ensureArrayStringOffsetsExist="true"
     findUnusedPsalmSuppress="true"
@@ -11,8 +12,15 @@
     ignoreInternalFunctionNullReturn="false"
     strictBinaryOperands="true"
 >
+    <globals>
+         <var
+            name="_SERVER"
+            type="array{SYMFONY_DEBUG: numeric-string, SYMFONY_ENV: 'dev'|'prod'|'test'}" />
+    </globals>
+
     <projectFiles>
         <directory name="src" />
+        <file name="bin/console" />
         <ignoreFiles>
             <directory name="vendor" />
         </ignoreFiles>

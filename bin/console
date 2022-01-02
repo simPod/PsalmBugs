@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php
+
+[$env, $debug] = (require __DIR__ . '/../src/bootstrap.php')();
